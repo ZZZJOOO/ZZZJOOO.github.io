@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-02T19:26:57.969Z</updated>
+  <updated>2018-12-02T19:11:22.286Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>schedule</title>
-    <link href="http://yoursite.com/2018/12/02/schedule/"/>
-    <id>http://yoursite.com/2018/12/02/schedule/</id>
-    <published>2018-12-02T19:16:14.000Z</published>
-    <updated>2018-12-02T19:26:57.969Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code>- From 12.02 to 12.17- leetcode aim at Medium- 551: C++ - 550: Processor, Memory Hierarchy, Virtual Memory- 590: Sorting, Greedy Algorithms, Dynamic Programming, Graph Algorithms, NP</code></pre><h1 id="Morning-9-00-12-00-3-h"><a href="#Morning-9-00-12-00-3-h" class="headerlink" title="Morning 9:00 - 12:00 (3 h)"></a>Morning 9:00 - 12:00 (3 h)</h1><ul><li>coursework: <ul><li>40 min for 551 </li><li>40 min for 550</li></ul></li><li>leetcode: <ul><li>40 min</li></ul></li></ul><h1 id="Afternoon-1-00-5-30-4-5-h"><a href="#Afternoon-1-00-5-30-4-5-h" class="headerlink" title="Afternoon 1:00 - 5:30 (4.5 h)"></a>Afternoon 1:00 - 5:30 (4.5 h)</h1><ul><li><p>coursework:</p><ul><li>40 min for 590, 550 and 551</li></ul></li><li><p>exercise or leetcode: 1.5 h</p></li></ul><h1 id="Evening-6-30-9-30-3-h"><a href="#Evening-6-30-9-30-3-h" class="headerlink" title="Evening 6:30 - 9:30 (3 h)"></a>Evening 6:30 - 9:30 (3 h)</h1><ul><li>coursework:<ul><li>30 min for 590, 550 and 551</li><li>40 min for leetcode</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;pre&gt;&lt;code&gt;- From 12.02 to 12.17
-- leetcode aim at Medium
-- 551: C++ 
-- 550: Processor, Memory Hierarchy, Virtual Memory
-- 590: Sorting, Gre
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>life_code</title>
