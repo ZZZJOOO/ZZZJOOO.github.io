@@ -81,13 +81,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Problem Description:  Given a non-empty array of unique positive integers A, consider the following graph:   There are A.length nodes, labelled A[0] to A[A.length - 1];There is an edge between A[i] an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode 952">
+<meta property="og:url" content="http://yoursite.com/2018/12/06/Leetcode-952/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Problem Description:  Given a non-empty array of unique positive integers A, consider the following graph:   There are A.length nodes, labelled A[0] to A[A.length - 1];There is an edge between A[i] an">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-06T20:28:42.508Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Leetcode 952">
+<meta name="twitter:description" content="Problem Description:  Given a non-empty array of unique positive integers A, consider the following graph:   There are A.length nodes, labelled A[0] to A[A.length - 1];There is an edge between A[i] an">
 
 
 
@@ -117,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/06/Leetcode-952/">
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Leetcode 952 | Hexo</title>
   
 
 
@@ -142,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -226,9 +229,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -258,9 +261,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/06/Leetcode-952/" itemprop="url">Leetcode 952</a></h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode 952</h1>
         
 
         <div class="post-meta">
@@ -310,9 +311,7 @@
       
 
       
-        
-          
-            <p>Problem Description:</p>
+        <p>Problem Description:</p>
 <blockquote>
 <p>Given a non-empty array of unique positive integers A, consider the following graph:</p>
 </blockquote>
@@ -325,8 +324,6 @@
 </code></pre><p>The idea of the algorithm is to take advantage of the restriction <code>1 &lt;= A[i] &lt;= 100000</code>. We will know that the smallest factor of all the number in array A will be larger that <code>313</code>. So we can just connect every number using their prime factors.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; factors = &#123;</span><br><span class="line">        2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101,</span><br><span class="line">        103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197,</span><br><span class="line">        199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    void uf_union(vector&lt;int&gt;&amp; uf, int p1, int p2) &#123;</span><br><span class="line">      // find the root for two</span><br><span class="line">      auto root1 = uf_find(uf, p1), root2 = uf_find(uf, p2);</span><br><span class="line">      // the count is stored in a negative number</span><br><span class="line">      if (root1 != root2) uf[root1] += uf[root2], uf[root2] = root1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    int uf_find(vector&lt;int&gt;&amp; uf, int p) &#123;</span><br><span class="line">      // if the value is smaller than 0, we find the root</span><br><span class="line">      if (uf[p] &lt;= 0) return p;</span><br><span class="line">      // else, trace upper</span><br><span class="line">      return uf[p] = uf_find(uf, uf[p]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /* the idea is to connect all the prime factors of the number together</span><br><span class="line">     * and only increment uf[largestPrimeFactor]</span><br><span class="line">     * if there is a large prime factor, eliminate it and take it in the &apos;small prime factor&apos; case </span><br><span class="line">     *     (store in hash map to see what they can connect to)</span><br><span class="line">     * if it is only a large prime number, store it in hash map and wait until the next number it can connext to</span><br><span class="line">     */</span><br><span class="line">    int largestComponentSize(vector&lt;int&gt;&amp; A, int res = 1) &#123;</span><br><span class="line">      unordered_map&lt;int, int&gt; primes;</span><br><span class="line">      // initialize as zero</span><br><span class="line">      vector&lt;int&gt; uf(factors.size(), 0);</span><br><span class="line"></span><br><span class="line">      // iterate through the array</span><br><span class="line">      for (auto a : A) &#123;</span><br><span class="line">        auto last_f = -1;</span><br><span class="line">        // iterate through all prime numbers smaller than a</span><br><span class="line">        for (auto i = 0; i &lt; factors.size() &amp;&amp; factors[i] &lt;= a; ++i) &#123;</span><br><span class="line">          // if a has a factor in prime number</span><br><span class="line">          if (a % factors[i] == 0) &#123;</span><br><span class="line">            // eliminate all factors in a equal to that prime number</span><br><span class="line">            while (a % factors[i] == 0) a /= factors[i];</span><br><span class="line">            // if last eliminated factor exisi, union them</span><br><span class="line">            if (last_f &gt;= 0) uf_union(uf, i, last_f);</span><br><span class="line">            // remember the last prime factor</span><br><span class="line">            last_f = i;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // if a is a large prime number not in factors array</span><br><span class="line">        if (a &gt; 1) &#123;</span><br><span class="line">          auto it = primes.find(a);</span><br><span class="line">          // if it is already in the hash map</span><br><span class="line">          if (it != primes.end()) &#123;</span><br><span class="line">            // if current number = largePrime * smallPrime, connect largePrime to smallPrime</span><br><span class="line">            if (last_f != -1 &amp;&amp; it-&gt;second != -1) uf_union(uf, last_f, it-&gt;second);</span><br><span class="line">            // if current number is a largePrime or the last number is only a largePrime</span><br><span class="line">            else if (last_f != -1 || it-&gt;second != -1) res = max(res, -(uf[uf_find(uf, max(last_f, it-&gt;second))] -= 1));</span><br><span class="line">            // else this large prime is repeated</span><br><span class="line">          &#125;</span><br><span class="line">          // if it is not in the hash map, record it</span><br><span class="line">          // if last number is a largePrime, recode it</span><br><span class="line">          if (it == primes.end() || it-&gt;second == -1) primes[a] = last_f;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /* if it is a large prime number, we donot connect them with others*/</span><br><span class="line">        if (last_f &gt;= 0) &#123; res = max(res, -(uf[uf_find(uf, last_f)] -= 1)); &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -343,171 +340,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/life-code/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZZZJOOO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/02/life-code/" itemprop="url">life_code</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-02T14:09:18-05:00">
-                2018-12-02
-              </time>
+              <a href="/2018/12/02/life-code/" rel="next" title="life_code">
+                <i class="fa fa-chevron-left"></i> life_code
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="Life-Code"><a href="#Life-Code" class="headerlink" title="Life Code"></a>Life Code</h1><blockquote>
-<p>How I wish to live my life through?</p>
-</blockquote>
-<h1 id="Mind-and-Body-Foundation"><a href="#Mind-and-Body-Foundation" class="headerlink" title="Mind and Body: Foundation"></a>Mind and Body: Foundation</h1><ul>
-<li><p>Plan out your time!</p>
-</li>
-<li><p>How can you be a better man than you used to be at the beginning of the day?</p>
-<ul>
-<li>Take yourself as someone you really care about and thinks what is good for him</li>
-</ul>
-</li>
-<li><p>How you keep yourself energetic?</p>
-<ul>
-<li>get up and sleep at a regular time</li>
-<li>eat healthily</li>
-<li>exercise regularly</li>
-<li>be around with things and people you like</li>
-<li>build new things everyday (an algorithm, a project or a new toy)</li>
-<li>share your life with your friends</li>
-</ul>
-</li>
-</ul>
-<h1 id="Clear-Thinking"><a href="#Clear-Thinking" class="headerlink" title="Clear Thinking"></a>Clear Thinking</h1><ul>
-<li><p>Write! Write! Write!</p>
-<ul>
-<li><p>Write in your own blog about what your achievement, what new tech you just learn or what problem you just solve</p>
-</li>
-<li><p>Write out your understanding of a new concept or solution to the problem</p>
-</li>
-</ul>
-</li>
-<li><p>Reading is to search for an inspiration to your problem!</p>
-</li>
-</ul>
-<h1 id="Life-Quality"><a href="#Life-Quality" class="headerlink" title="Life Quality"></a>Life Quality</h1><ul>
-<li><p>Life is too short: do what you really love as much as you can.</p>
-</li>
-<li><p>Think about what you can do to make things better rather than what you can comment on people.</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -517,138 +371,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/28/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZZZJOOO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/28/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-28T20:17:31-05:00">
-                2018-11-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -656,6 +383,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -866,6 +597,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
